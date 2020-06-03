@@ -1,0 +1,15 @@
+$spaces: (
+  small: 4px,
+  base: 8px,
+  large: 12px,
+  x-large: 24px
+);
+
+@function use-space($key) {
+  $value: map-get($spaces, $key);
+  @if ($value) {
+    @return $value;
+  } @else {
+    @error 'There is no such key'
+  }
+}

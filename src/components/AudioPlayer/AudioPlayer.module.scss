@@ -1,0 +1,90 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/spaces";
+
+.audioPlayer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.trackInfo {
+  padding-left: use-space(base);
+  flex: 1;
+  color: use-colors(content);
+
+  h2,
+  h3,
+  p {
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 1.03px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: use-space(small);
+  }
+
+  h3 {
+    font-size: 14px;
+    padding-bottom: use-space(small);
+  }
+
+  p {
+    font-size: 12px;
+    color: use-colors(background);
+  }
+}
+
+.playButtonContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .playButton {
+    position: absolute;
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    left: 2px;
+    cursor: pointer;
+    transition: 300ms color;
+
+    &:hover {
+      color: use-colors(green);
+    }
+  }
+
+  .progress {
+    height: 54px;
+    width: 54px;
+  }
+}
+
+.leftControls {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.trackMetadata {
+  display: flex;
+  align-items: center;
+
+  i {
+    cursor: pointer;
+  }
+
+  > p {
+    color: use-colors(content);
+    padding-right: use-space(small);
+  }
+}

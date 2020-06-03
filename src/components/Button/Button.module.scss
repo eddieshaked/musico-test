@@ -1,0 +1,38 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/spaces";
+@import "../../assets/scss/base/sizes";
+
+.button {
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: use-space(large);
+  color: use-colors(content);
+  border-radius: 4px;
+  transition: background-color 300ms, color 300ms;
+  border: none;
+  font-weight: 600;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.ghost {
+    background-color: inherit;
+    color: use-colors(green);
+
+    &:hover {
+      color: use-colors(content);
+      background-color: rgba(use-colors(green), .5);
+    }
+  }
+
+  &.fill {
+    background-color: rgba(use-colors(green), .5);
+
+    &:hover {
+      background-color: lighten(rgba(use-colors(green), .5), 20%);
+    }
+  }
+
+}

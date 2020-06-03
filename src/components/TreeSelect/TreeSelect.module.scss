@@ -1,0 +1,26 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/spaces";
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    cursor: pointer;
+    font-size: 18px;
+    color: use-colors(content);
+    padding: use-space(small);
+    width: fit-content;
+    transition: color 300ms;
+
+    &:hover {
+      color: use-colors(green);
+    }
+
+    &.selected {
+      font-weight: 700;
+      color: use-colors(green);
+    }
+  }
+}

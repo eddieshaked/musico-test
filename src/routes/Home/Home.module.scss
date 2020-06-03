@@ -1,0 +1,18 @@
+@import "../../assets/scss/base/spaces";
+@import "../../assets/scss/base/colors";
+
+.home {
+  padding: use-space(x-large);
+  display: flex;
+  border-radius: 5px;
+}
+
+.playList {
+  flex: 1;
+  padding-left: use-space(x-large);
+}
+
+.listContainer {
+  padding-right: use-space(base);
+  border-right: 1px solid use-colors(secondary);
+}

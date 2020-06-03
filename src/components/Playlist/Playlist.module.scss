@@ -1,0 +1,30 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/spaces";
+
+.buttonsContainer {
+  height: 50px;
+  display: flex;
+  border-bottom: 1px solid;
+  padding-bottom: use-space(small);
+  color: use-colors(content);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: use-space(large);
+
+  > h2 {
+    flex: 1;
+    margin: 0;
+  }
+  > button {
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+
+}
+
+.player {
+  &:not(:last-child) {
+    border-bottom: 1px solid use-colors(primary);
+  }
+}
